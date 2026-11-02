@@ -2,6 +2,8 @@
 
 [Read in English](README.en.md)
 
+English version: [README.en.md](README.en.md) (archivos en `en/`).
+
 Desde el 30-nov-2026 las peticiones en modo rápido con Opus 4.8 darán error (CHANGELOG de Claude Code 2.1.316). Este repo trae un script que busca dónde tienes Opus 4.8 fijado y los ajustes para pasar a Opus 5.5.
 
 La receta completa (a quién afecta, migrar en tres pasos, precio y esfuerzo de Opus 5.5, activar el modo rápido sin pagar de más y los errores típicos):

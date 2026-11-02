@@ -1,6 +1,6 @@
 # Claude Code Opus 4.8: fast mode ends on 30 Nov, move to 5.5
 
-[Leer en español](README.md)
+[Leer en español](README.md): the Spanish version is at the repository root and in README.md; the English files are in `en/`.
 
 From 30 Nov 2026, fast mode requests with Opus 4.8 will return an error (Claude Code 2.1.316 CHANGELOG). This repo brings a script that finds where you have Opus 4.8 pinned and the settings to move to Opus 5.5.
 
@@ -13,17 +13,17 @@ The full recipe (who is affected, migrating in three steps, Opus 5.5 price and e
 
 | File | What for |
 | --- | --- |
-| `buscar-opus-48.sh` | Looks for `claude-opus-4-8` and `fastMode` in `settings*.json`, in `ANTHROPIC_MODEL` / `ANTHROPIC_DEFAULT_OPUS_MODEL` and in `*.sh`, `*.yml` and `*.yaml`. Exits with `1` if it finds Opus 4.8 (messages in Spanish) |
-| `settings-despues.json` | `"model": "claude-opus-5-5"` with `"fastMode": true` |
-| `settings-equipo.json` | `fastModePerSessionOptIn: true`: each session starts with fast mode off |
+| `en/buscar-opus-48.sh` | Looks for `claude-opus-4-8` and `fastMode` in `settings*.json`, in `ANTHROPIC_MODEL` / `ANTHROPIC_DEFAULT_OPUS_MODEL` and in `*.sh`, `*.yml` and `*.yaml`. Exits with `1` if it finds Opus 4.8 |
+| `en/settings-despues.json` | `"model": "claude-opus-5-5"` with `"fastMode": true` |
+| `en/settings-equipo.json` | `fastModePerSessionOptIn: true`: each session starts with fast mode off |
 
 ## How to use it
 
 ```bash
 git clone https://github.com/carlosp5751258-lgtm/ctrlia-opus-48-modo-rapido.git
 cd ctrlia-opus-48-modo-rapido
-./buscar-opus-48.sh                        # checks ~/.claude and the current folder
-./buscar-opus-48.sh ~/projects ~/.claude   # or the folders you pass it
+./en/buscar-opus-48.sh                        # checks ~/.claude and the current folder
+./en/buscar-opus-48.sh ~/projects ~/.claude   # or the folders you pass it
 ```
 
 If it finds anything, change `claude-opus-4-8` to `claude-opus-5-5` (or the `opus` alias) wherever you use fast mode. In scripts and CI:
@@ -46,4 +46,4 @@ For the settings, merge the key you need into your `~/.claude/settings.json` (do
 MIT. See [LICENSE](LICENSE).
 
 ---
-Part of **[Ctrl+IA](https://ctrlia.dev/)**: Claude Code like a pro, in Spanish. Made by Carlos P.
+Part of **[Ctrl+IA](https://ctrlia.dev/en/)**: Claude Code like a pro. Made by Carlos P.
